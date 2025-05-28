@@ -1,0 +1,768 @@
+/* Global font family & weight for all text */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* prevent any horizontal scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.8);
+    width: 100vw;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-top {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #333;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-bottom {
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.navbar-bottom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 0;
+}
+
+.navbar-bottom ul li {
+    flex: 1 1 0;
+    min-width: 0;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 8px;
+    background: transparent;
+    max-width: none;
+}
+
+/* Зберігаємо пропорції для NGYM */
+.navbar-bottom ul li.merged {
+    flex: 1.3 1 0;
+    min-width: 180px;
+    max-width: 320px;
+}
+
+/* Пропорції для цитати */
+.navbar-bottom ul li .navbar-quote {
+    max-width: 260px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.2;
+    padding: 0 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Adjust the NGYM link styles */
+.navbar-bottom ul li.merged a {
+    grid-column: span 1; /* Take only one cell */
+    color: #FAC1FA;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar-bottom ul li.merged a svg {
+    margin-left: 10px;
+}
+
+.navbar-bottom ul li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-bottom ul li:nth-child(3) a {
+    color: #FAC1FA;
+    font-weight: 800;
+}
+
+.navbar-bottom ul li a {
+    display: block;
+    height: 100%;
+    line-height: 80px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.navbar-bottom ul li a svg {
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+
+.navbar-bottom ul li:first-child .navbar-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-bottom ul li:first-child img {
+    height: 40px;
+    width: auto;
+}
+
+.brand {
+    color: white;
+    font-size: 1.5em;
+}
+
+.photogym1 {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.photogym1 img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+
+.photogym1-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.black-divider {
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.black-divider .black-divider {
+    border-bottom: none;
+}
+
+.divider-text {
+    color: #FAC1FA;
+    font-size: 64px;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.svg-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.special-offers {
+    background-color: black;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.offer-title {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    margin: 0;
+}
+
+.offers-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.first-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: 20px 0;
+}
+
+.first-offer .right-arrow-small {
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    fill: #FAC1FA;
+}
+
+.first-offer .offer-text {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.offer-item:not(.first-offer) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.offer-part {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.offer-part.bottom {
+    text-align: left;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.offer-item {
+    background-color: transparent;
+    color: white;
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.lightweight-baby {
+    background-color: #FAC1FA;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.lightweight-baby .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lightweight-baby .divider-text {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    margin: 0;
+}
+
+.lightweight-baby .logo-black {
+    width: 80px;
+    height: 80px;
+}
+
+.lightweight-baby .logo-black path {
+    fill: black !important;
+}
+
+.mandatory-guidelines {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.mandatory-guidelines .mandatory-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.rules-list {
+    list-style: disc;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.rules-list li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.navbar-space {
+    background-color: black;
+    height: 80px;
+}
+
+/* burger defaults hidden on desktop */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #fff;
+}
+
+/* desktop: show right, hide down */
+.right-arrow-small {
+    display: inline-block;
+}
+
+.down-arrow-small {
+    display: none;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown toggle link */
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid white;
+    padding: 10px;
+    z-index: 1000;
+    text-align: left;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid white;
+    padding: 20px 0; /* Match the height of the "ПРО НАС" button */
+    margin: 5px 0; /* Add spacing between buttons */
+    font-weight: 600; /* Match font weight */
+    font-size: 16px; /* Match font size */
+    background-color: transparent; /* Match background */
+    box-sizing: border-box;
+}
+
+.dropdown-menu a:hover {
+    background-color: #FAC1FA; /* Highlight on hover */
+    color: black;
+}
+
+/* Show dropdown menu when open */
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.navbar-quote {
+    display: block;
+    color: #FAC1FA;
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* PHONE / small‑screen adaptations */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-top {
+        justify-content: center;
+    }
+
+    .navbar-icons img {
+        width: 24px;
+        height: 24px;
+        margin: 0 6px;
+    }
+
+    .navbar-bottom ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+    }
+
+    .navbar-bottom ul li {
+        margin: 4px 0;
+    }
+
+    .merged svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero img {
+        height: 50vh;
+    }
+
+    .divider-text {
+        font-size: 32px;
+    }
+
+    .special-offers {
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .offer-title {
+        font-size: 28px;
+    }
+
+    .first-offer {
+        font-size: 24px;
+    }
+
+    .offer-part.top {
+        font-size: 18px;
+    }
+
+    .offer-part.bottom {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* stack and pad the offers */
+    .special-offers .offers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    /* make each card full‑width and inset its content */
+    .special-offers .offer-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    /* adjust typography */
+    .special-offers .offer-part.top {
+        font-size: 18px;
+    }
+
+    .special-offers .offer-part.bottom {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* hide the old spacer */
+    .navbar-space {
+        display: none;
+    }
+
+    /* push page content below the 80px navbar */
+    body {
+        padding-top: 80px;
+    }
+
+    /* always show burger button */
+    .burger {
+        display: block;
+    }
+
+    /* position the menu full‐screen under the top bar, but hidden by default */
+    .navbar-bottom {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    /* show the menu when .open is toggled on .navbar */
+    .navbar.open .navbar-bottom {
+        display: flex;
+    }
+
+    /* stack links */
+    .navbar-bottom ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-bottom ul li {
+        width: 100%;
+    }
+
+    .navbar-bottom ul li a {
+        border: none;
+        padding: 16px 0;
+        line-height: normal;
+    }
+
+    /* mobile: swap */
+    .right-arrow-small {
+        display: none;
+    }
+
+    .down-arrow-small {
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        width: auto; /* Adjust width to fit content */
+        text-align: center; /* Center text inside the dropdown */
+    }
+
+    /* Hide the second list item in the navbar-bottom on mobile */
+    .navbar-bottom ul li:nth-child(2) {
+        display: none;
+    }
+
+    .navbar-bottom ul li {
+        border: none; /* Remove border for mobile view */
+    }
+}
+
+/* Hide the top navbar in desktop version */
+@media (min-width: 1024px) {
+    .navbar-top {
+        display: none;
+    }
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 32px auto 0 auto;
+    background: rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 32px 24px 24px 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #FAC1FA;
+    margin-bottom: 4px;
+    font-size: 1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 10px 12px;
+    border: 1.5px solid #FAC1FA;
+    border-radius: 8px;
+    background: #000000;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c06fc0;
+}
+
+.contact-form .submit-btn {
+    margin-top: 10px;
+    background: #FAC1FA;
+    color: #222;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(250,193,250,0.08);
+}
+
+.contact-form .submit-btn:hover,
+.contact-form .submit-btn:focus {
+    background: #222;
+    color: #FAC1FA;
+}
+.contact {
+    background: #000000;
+    padding: 32px 0;
+    max-width: 100vw;
+}
+
+.price-order-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Кнопка і ціна займають всю ширину */
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    width: 100%;
+    max-width: 220px; /* Однакова ширина для всіх */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #fff;
+    background: linear-gradient(90deg, #FAC1FA 0%, #c06fc0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.order-btn {
+    display: block;
+    width: 100%;
+    background: #FAC1FA;
+    color: #222;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(250,193,250,0.12);
+    margin: 0 auto 8px auto;
+}
+
+/* Mobile adaptation */
+@media (max-width: 600px) {
+    .contact-form {
+        max-width: 95vw;
+        padding: 18px 8px 16px 8px;
+    }
+    .contact-form .submit-btn {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+}
